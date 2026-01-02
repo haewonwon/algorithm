@@ -1,6 +1,6 @@
 function solution(n, t) {
-    // var answer = 0;
-    // return answer;
-    
     return n * 2**t
+    
+    // n << t
+    // 시프트 연산자를 사용해 푸는 방법도 있음
 }
