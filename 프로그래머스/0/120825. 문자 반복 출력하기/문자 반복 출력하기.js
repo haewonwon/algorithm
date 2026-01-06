@@ -1,4 +1,5 @@
 function solution(my_string, n) {
+    // 내가 작성한 코드
     let arr = my_string.split("")
     let newArr = []
     
@@ -9,4 +10,8 @@ function solution(my_string, n) {
     }
     
     return newArr.join("")
+    
+    // 참고 코드
+    // let answer = [...my_string].map(v => v.repeat(n)).join("");
+    // return answer;
 }
