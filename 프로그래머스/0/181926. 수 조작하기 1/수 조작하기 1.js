@@ -10,10 +10,13 @@
 //     return (sum1 * 1) + (sum10 * 10) + n
 // }
 
-const solution = (n, control) => {
-    // 1. 각 문자가 의미하는 값을 객체(딕셔너리)로 정의합니다.
+function solution(n, control) {
     const ops = { w: 1, s: -1, d: 10, a: -10 };
     
-    // 2. 문자열을 배열로 펼친 뒤([...control]), reduce로 값을 누적합니다.
-    return [...control].reduce((acc, char) => acc + ops[char], n);
-};
+    // 문자열(control)은 바로 for...of로 순회 가능합니다.
+    for (const char of control) {
+        n += ops[char];
+    }
+    
+    return n;
+}
