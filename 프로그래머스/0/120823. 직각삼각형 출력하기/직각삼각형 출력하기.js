@@ -9,12 +9,10 @@ let input = [];
 rl.on('line', function (line) {
     input = line.split(' ');
 }).on('close', function () {
-    let num = Number(input[0]);
-    let result = "";
+    let n = Number(input[0]);
     
-    for (let i = 0; i < num; i++) {
-        result += "*".repeat(i + 1) + "\n"
+    for (let i = 1; i < n + 1; i++) {
+        console.log("*".repeat(i))
         
     }
-    console.log(result)
 });
